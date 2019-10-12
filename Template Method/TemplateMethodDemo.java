@@ -57,7 +57,7 @@ class Realization extends Specialization{
     }
 }
 
-public class TemplateMethod {
+public class TemplateMethodDemo {
 
     public static void main(String[] args) {
         Generalization algorithm = new Realization();   //使用者一定是new最具体的class

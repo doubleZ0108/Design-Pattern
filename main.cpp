@@ -17,10 +17,28 @@ void Test_TemplateMethod()
     myDoc.OnFileOpen();
 }
 
+void Test_Strategy()
+{
+    int op;
+    StrategyTest stest;
+    
+    while(true){
+        /* 有新的策略，在这里修改一下UI */
+        cout << "你想使用那种解决方案1~3 [0 to quit] " << endl;
+        cin >> op;
+        if(!op){break;}
+        
+        stest.setStrategy(op, 999);
+        stest.run();
+        
+    }
+    
+    
+}
 
 int main(int argc, const char * argv[]) {
     
-    Test_TemplateMethod();
+    
     
     return 0;
 }
