@@ -53,7 +53,7 @@
 
 - **Inheritance ｜ 继承：**is-a
 
-  <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/inheritance例子png.png" alt="image-20191010201816293" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/inheritance例子png.png" alt="image-20191010201816293" style="zoom:50%;" />
 
   ```C++
   class CMyDoc : public CDocumemnt{		//CMyDoc中有CDocumemnt成分
@@ -71,11 +71,11 @@
 
     > 是一种：就可以用继承来表示
 
-    <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/inheritance.png" alt="image-20191009201036158" style="zoom:50%;" />
+    <img src="ScreenShots/Intro/inheritance.png" alt="image-20191009201036158" style="zoom:50%;" />
 
 - **Composition ｜ 组成：**has-a
 
-  <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/Composition.png" alt="image-20191009202130328" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/Composition.png" alt="image-20191009202130328" style="zoom:50%;" />
 
   ```C++
   class CMyDoc : public CDocumemnt	//CMyDoc中有CDocumemnt成分
@@ -93,7 +93,7 @@
 
 - **Aggregation ｜ 聚合：**内含指针
 
-  <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/Aggregation.png" alt="image-20191009201551202" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/Aggregation.png" alt="image-20191009201551202" style="zoom:50%;" />
 
   - 两者的生命是分开的：我有个指针指向你，用的时候new一个，不用的时候delete掉
 
@@ -101,13 +101,13 @@
 
   - 例. 声明的时候有一个pointer指向生物，在运行的时候也可以用它只想一只猪（不能用reference）
 
-    <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/Aggregation例子.png" alt="image-20191011091712048" style="zoom:50%;" />
+    <img src="ScreenShots/Intro/Aggregation例子.png" alt="image-20191011091712048" style="zoom:50%;" />
 
 - **Association ｜ 关联：**某种关联（在线上写上关联）
 
   - 例. client -- communicates --> server
 
-  <img src="../../../document/软件架构与设计模式/ScreenShots/Intro/Association.png" alt="image-20191009201516775" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/Association.png" alt="image-20191009201516775" style="zoom:50%;" />
 
 - **Delegation | 委托：**
 
