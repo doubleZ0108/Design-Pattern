@@ -53,7 +53,7 @@
 
 - **Inheritance ｜ 继承：**is-a
 
-  <img src="ScreenShots/Intro/inheritance例子png.png" alt="image-20191010201816293" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/inheritance example.png" alt="image-20191010201816293" style="zoom:50%;" />
 
   ```C++
   class CMyDoc : public CDocumemnt{		//CMyDoc中有CDocumemnt成分
@@ -101,7 +101,7 @@
 
   - 例. 声明的时候有一个pointer指向生物，在运行的时候也可以用它只想一只猪（不能用reference）
 
-    <img src="ScreenShots/Intro/Aggregation例子.png" alt="image-20191011091712048" style="zoom:50%;" />
+    <img src="ScreenShots/Intro/Aggregation example.png" alt="image-20191011091712048" style="zoom:50%;" />
 
 - **Association ｜ 关联：**某种关联（在线上写上关联）
 
@@ -114,6 +114,21 @@
   - 例. a调用b就是一种委托
 
 ------
+
+### C++中new & delete
+
+> ```C++
+> Test* test;
+> delete test;
+> ```
+>
+> 这样会报错么？
+>
+> 答：未定义，**危险**⚠️
+
+<img src="ScreenShots/Intro/new&delete.jpeg" alt="new&amp;delete" style="zoom:150%;" />
+
+-----
 
 ### OCP 开放封闭守则
 
