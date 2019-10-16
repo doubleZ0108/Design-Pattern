@@ -10,6 +10,7 @@
 #include "TemplateMethod.h"
 #include "Strategy.h"
 #include "Observer.h"
+#include "Iterator.h"
 using namespace std;
 
 void Test_TemplateMethod()
@@ -34,7 +35,6 @@ void Test_Strategy()
         
     }
     
-    
 }
 
 void Test_Observer()
@@ -47,9 +47,14 @@ void Test_Observer()
     subj.updateValue(14);
 }
 
+void Test_Iterator()
+{
+    Iterator();
+}
+
 int main(int argc, const char * argv[]) {
     
-    
+    Test_Iterator();
     
     return 0;
 }
