@@ -9,6 +9,7 @@
 #include <iostream>
 #include "TemplateMethod.h"
 #include "Strategy.h"
+#include "Observer.h"
 using namespace std;
 
 void Test_TemplateMethod()
@@ -34,6 +35,16 @@ void Test_Strategy()
     }
     
     
+}
+
+void Test_Observer()
+{
+    Subject subj;
+    DivObserver divobs1(4);    subj.addObserver(&divobs1);
+    DivObserver divobs2(3);    subj.addObserver(&divobs2);
+    ModObserver modobs3(3);    subj.addObserver(&modobs3);
+    
+    subj.updateValue(14);
 }
 
 int main(int argc, const char * argv[]) {
