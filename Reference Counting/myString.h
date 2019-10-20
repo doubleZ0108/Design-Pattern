@@ -24,8 +24,10 @@ public:
     myString(const char* cstr);
     
     myString(const myString& str);
-    myString& operator=(const myString& str);
     ~myString();
+    myString& operator=(const myString& str);
+    myString& operator=(const char* cstr);
+    myString& operator=(char ch);
     
     char* get_c_str() const {return data;}
 };
@@ -58,6 +60,11 @@ myString::myString(const myString& str)
     strcpy(data, str.get_c_str());
 }
 
+myString::~myString()
+{
+    delete[] data;
+}
+
 myString& myString::operator=(const myString& str)
 {
     if(&str == this){       //拷贝构造函数瑶检测自我赋值
@@ -73,9 +80,22 @@ myString& myString::operator=(const myString& str)
     return *this;
 }
 
-myString::~myString()
+myString& myString::operator=(const char* cstr)
 {
     delete[] data;
+    data = new char[strlen(cstr) + 1];
+    strcpy(data, cstr);
+    return *this;
 }
+
+myString& myString::operator=(char ch)
+{
+    delete[] data;
+    data = new char[2];
+    data[0] = ch;
+    return *this
+}
+
+
 
 #endif /* myString_h */
