@@ -11,6 +11,8 @@
 #include "Strategy.h"
 #include "Observer.h"
 #include "Iterator.h"
+#include "Singleton.h"
+#include "myString.h"
 using namespace std;
 
 void Test_TemplateMethod()
@@ -52,9 +54,30 @@ void Test_Iterator()
     Iterator();
 }
 
+void Test_Singleton()
+{
+    Singleton::Instance();
+    MayersSingleton::Instance();
+    
+}
+
+void Test_myString()
+{
+    myString s1 = "hello world";
+    myString s2;
+    s2 = s1;
+    myString s3 = s2;
+    
+
+    cout << s1 <<endl;
+    cout << s2 <<endl;
+    cout << s3 <<endl;
+}
+
+
 int main(int argc, const char * argv[]) {
     
-    Test_Iterator();
+    Test_myString();
     
     return 0;
 }
