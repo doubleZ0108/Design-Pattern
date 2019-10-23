@@ -12,7 +12,10 @@
 #include "Observer.h"
 #include "Iterator.h"
 #include "Singleton.h"
-#include "myString.h"
+//#include "myString.h"
+//#include "ReferenceCounting.h"
+#include "CopyOnWrite.h"
+
 using namespace std;
 
 void Test_TemplateMethod()
@@ -61,23 +64,31 @@ void Test_Singleton()
     
 }
 
-void Test_myString()
+void Test_ReferenceCounting()
 {
-    myString s1 = "hello world";
-    myString s2;
-    s2 = s1;
-    myString s3 = s2;
-    
+    myString str = "hello";     //myString(const char* cstr);
+    myString str1;              //myString() {}
+    str1 = str;                 //myString& operator=(const myString& rhs);
+    myString str2(str);         //myString(const myString& rhs);
+}
 
-    cout << s1 <<endl;
-    cout << s2 <<endl;
-    cout << s3 <<endl;
+void Test_CopyOnWrite()
+{
+    const myString cstr = "hello";
+    cout << cstr[2];        //调用@1
+
+    myString str = "world";
+    myString str1(str);
+    cout << str[2];                //调用@2 read
+    
+    myString str2;
+    str2 = str;
+    str[1] = 'O';                //调用@2 write
 }
 
 
 int main(int argc, const char * argv[]) {
     
-    Test_myString();
     
     return 0;
 }
