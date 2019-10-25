@@ -14,7 +14,8 @@
 #include "Singleton.h"
 //#include "myString.h"
 //#include "ReferenceCounting.h"
-#include "CopyOnWrite.h"
+//#include "CopyOnWrite.h"
+#include "Shareable.h"
 
 using namespace std;
 
@@ -86,9 +87,18 @@ void Test_CopyOnWrite()
     str[1] = 'O';                //调用@2 write
 }
 
+void Test_Shareable()
+{
+    myString s1 = "hello";
+    char *p = &s1[1];   //使用了non-const operator[]，悲观的认为是外界拥有handle了 => 将shareable设为false
+    myString s2 = s1;   //这里s1的shareable已经被设为false，所以此时s2的value要new一个新的
+    *p = 'x';
+}
+
 
 int main(int argc, const char * argv[]) {
     
+    Test_Shareable();
     
     return 0;
 }
