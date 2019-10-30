@@ -16,6 +16,7 @@
 //#include "ReferenceCounting.h"
 //#include "CopyOnWrite.h"
 #include "Shareable.h"
+#include "FactoryMethod.h"
 
 using namespace std;
 
@@ -95,10 +96,18 @@ void Test_Shareable()
     *p = 'x';
 }
 
+void Test_FactoryMethod()
+{
+    myApp *myapp = new myApp();
+    myapp->NewDocument("doc1");
+    myapp->NewDocument("doc2");
+    myapp->OutputDocument();
+}
+
 
 int main(int argc, const char * argv[]) {
     
-    Test_Shareable();
+    Test_FactoryMethod();
     
     return 0;
 }
