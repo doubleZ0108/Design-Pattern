@@ -17,7 +17,9 @@
 //#include "CopyOnWrite.h"
 //#include "Shareable.h"
 //#include "FactoryMethod.h"
-#include "Property.h"
+//#include "Property.h"
+#include "Composite.h"
+
 
 using namespace std;
 
@@ -105,14 +107,33 @@ using namespace std;
 //    myapp->OutputDocument();
 //}
 
-void Test_Property()
+//void Test_Property()
+//{
+//    testProperty();
+//}
+
+void Test_Composite()
 {
-    testProperty();
+    Composite containers[4];
+    for(int i=0;i<4;++i){
+        for(int j=0;j<3;++j){
+            containers[i].add(new Leaf(i*3 + j));
+        }
+    }
+
+    for(int i=1;i<4;++i){
+        containers[0].add(&(containers[i]));
+    }
+
+    for(int i=0;i<4;++i){
+        containers[i].traverse();
+        cout << endl;
+    }
 }
 
 int main(int argc, const char * argv[]) {
     
-    Test_Property();
+    Test_Composite();
     
     return 0;
 }
