@@ -18,10 +18,10 @@
 //#include "Shareable.h"
 //#include "FactoryMethod.h"
 //#include "Property.h"
-#include "Composite.h"
-#include "BeforeCommand.h"
-#include "Command.h"
-
+//#include "Composite.h"
+//#include "BeforeCommand.h"
+//#include "Command.h"
+#include "Memento.h"
 
 using namespace std;
 
@@ -133,17 +133,21 @@ using namespace std;
 //    }
 //}
 
-void Test_Command(){
-    cout << "=== Before Command ===" << endl;
-    beforeCommand();
+//void Test_Command(){
+//    cout << "=== Before Command ===" << endl;
+//    beforeCommand();
+//
+//    cout << endl << "=== After Command ===" << endl;
+//    afterCommand();
+//}
 
-    cout << endl << "=== After Command ===" << endl;
-    afterCommand();
+void Test_Memento(){
+    testMemento();
 }
 
 int main(int argc, const char * argv[]) {
     
-    Test_Command();
+    Test_Memento();
     
     return 0;
 }
