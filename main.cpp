@@ -19,6 +19,8 @@
 //#include "FactoryMethod.h"
 //#include "Property.h"
 #include "Composite.h"
+#include "BeforeCommand.h"
+#include "Command.h"
 
 
 using namespace std;
@@ -112,28 +114,36 @@ using namespace std;
 //    testProperty();
 //}
 
-void Test_Composite()
-{
-    Composite containers[4];
-    for(int i=0;i<4;++i){
-        for(int j=0;j<3;++j){
-            containers[i].add(new Leaf(i*3 + j));
-        }
-    }
+//void Test_Composite()
+//{
+//    Composite containers[4];
+//    for(int i=0;i<4;++i){
+//        for(int j=0;j<3;++j){
+//            containers[i].add(new Leaf(i*3 + j));
+//        }
+//    }
+//
+//    for(int i=1;i<4;++i){
+//        containers[0].add(&(containers[i]));
+//    }
+//
+//    for(int i=0;i<4;++i){
+//        containers[i].traverse();
+//        cout << endl;
+//    }
+//}
 
-    for(int i=1;i<4;++i){
-        containers[0].add(&(containers[i]));
-    }
+void Test_Command(){
+    cout << "=== Before Command ===" << endl;
+    beforeCommand();
 
-    for(int i=0;i<4;++i){
-        containers[i].traverse();
-        cout << endl;
-    }
+    cout << endl << "=== After Command ===" << endl;
+    afterCommand();
 }
 
 int main(int argc, const char * argv[]) {
     
-    Test_Composite();
+    Test_Command();
     
     return 0;
 }
