@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class BridgeDemo {
     public static void main(String[] args) {
+        //client端没呈现impl，很好
         Stack[] stacks = {
                 new Stack("array"),
                 new Stack("list"),
