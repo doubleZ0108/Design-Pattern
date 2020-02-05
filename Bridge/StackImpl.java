@@ -2,10 +2,14 @@ package Bridge;
 
 /**
  * @program: Design Pattern
- * @description:
+ * @description: StackImpl
  * @author: Zhe Zhang
  * @create: 2020/02/05
  **/
+
+/**
+ * 栈需要实现的功能
+ */
 interface StackImpl {
     void push(int in);
     int pop();
@@ -14,6 +18,10 @@ interface StackImpl {
     boolean isFull();
 }
 
+
+/**
+ * 底层用数组实现的栈
+ */
 class StackArray implements StackImpl{
     private int[] items = new int[12];
     private int total = -1;
@@ -62,6 +70,9 @@ class Node{
     public Node(int value) { this.value = value; }
 }
 
+/**
+ * 底层用链表实现的栈
+ */
 class StackList implements StackImpl{
     private Node last;
 
@@ -70,9 +81,9 @@ class StackList implements StackImpl{
         if(last == null){
             last = new Node(in);
         }else{
-            last.next = new Node(in);
-            last.next.prev = last;
-            last = last.next;
+            last.next = new Node(in);   //前的next指针是后
+            last.next.prev = last;      //后的prev指针是前
+            last = last.next;           //前进到下一个节点
         }
     }
 
@@ -80,7 +91,7 @@ class StackList implements StackImpl{
     public int pop() {
         if(!isEmpty()){
             int tmp = last.value;
-            last = last.prev;
+            last = last.prev;   //往回退一个节点
             return tmp;
         }else{
             return -1;
