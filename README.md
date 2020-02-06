@@ -873,7 +873,7 @@ pubish-subscribe 发行-订阅
 - **Implementation**：创作型class hierarchy
   - subclass要为base class's abstract method给出具体实现
 
-<img src="/ScreenShots/Bridge/uml.jpeg" alt="uml" style="zoom:50%;" />
+<img src="ScreenShots/Bridge/uml.jpeg" alt="uml" style="zoom:50%;" />
 
 - 隔离了Abstract hierarchy和Implement hierarchy
 - 如果要添加新功能：在Abstract hierarchy中派生新的subclass
@@ -882,7 +882,7 @@ pubish-subscribe 发行-订阅
 
 > 例. java 栈
 >
-> <img src="../../../document/软件架构与设计模式/ScreenShots/Bridge/example_uml.jpeg" alt="example_uml" style="zoom:50%;" />
+> <img src="ScreenShots/Bridge/example_uml.jpeg" alt="example_uml" style="zoom:50%;" />
 >
 > **Stack**
 >
@@ -897,3 +897,40 @@ pubish-subscribe 发行-订阅
 > ------
 >
 > - 客户端在使用的时候不对它暴露implementation hierarchy
+
+------
+
+## Abstract Factory
+
+以同一interface创建一整族相关或相依的objects，不需指明各objects真正所属的具体classes
+
+<img src="http://c.biancheng.net/uploads/allimg/181114/3-1Q11416002NW.gif" alt="抽象工厂模式的结构图" style="zoom:50%;" />
+
+- **production terminology**
+
+  - **product**: the object being created
+  - **factory**: the object that creates other objects
+  - factory use **factory method** to create products
+
+- **优**：
+
+  - 将concreate classes隔离开，client使用abstract factory's interface创建产品
+  - 易于更替一整租products（只需更换一个concrete factory即可）
+
+- **缺**：
+
+  - 助长了products之间的一致性（用了某个concrete factory就是用了同一族的所有products）
+  - 难以支持新品种products（abstract factory interface已写死了能生产的所有products）
+
+- **比较**
+
+  - factory method只考虑生产同等级的产品
+  - abstract factory考虑**多等级产品的生产**：*例如农场里既养动物又种植物；电器场既生产电视又生产洗衣机又生产空调；大学既有软件专业又有化学专业*
+
+- 系统中有多个产品族，每个具体工厂创建同一族但属于不同等级结构的产品
+
+  <img src="http://c.biancheng.net/uploads/allimg/181114/3-1Q1141559151S.gif" alt="电器工厂的产品等级与产品族" style="zoom:50%;" />
+
+  > 例. Java 农场
+  >
+  > 
