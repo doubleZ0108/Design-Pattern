@@ -963,3 +963,19 @@ pubish-subscribe 发行-订阅
 
 ------
 
+## Proxy
+
+为object提供一个代理人，用以控制对该object的访问（有些情况下，client不能或不想直接访问另一个对象，这时需要找一个中介帮忙完成）
+
+<img src="ScreenShots/Proxy/uml.png" alt="image-20200206135844378" style="zoom:50%;" />
+
+- `RealSubject`: 实现例抽象Subject的具体业务，是**最终要引用的对象**
+- `Proxy`:提供了与RealSubject相同的接口，内部含有对RealSubject对引用
+
+- **例**：要访问远程对象比较大，下载要花很多时间；处于安全原因要屏蔽客户端直接访问真实对象
+- **优**
+  - 保护目标对象
+  - 代理可以扩展目标对象的功能
+  - 解耦客户端与目标端
+- **缺**
+  - 增加一层代理，会使处理速度变慢
