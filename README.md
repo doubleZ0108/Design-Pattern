@@ -1006,3 +1006,15 @@ pubish-subscribe 发行-订阅
 
 ------
 
+## State
+
+允许object在内部state有变化时改变其行为，就好像其class也随之改变一样
+
+<img src="ScreenShots/State/uml.png" alt="image-20200206141930839" style="zoom:50%;" />
+
+> 例. Java 白天/夜晚
+>
+> <img src="ScreenShots/State/example_uml.jpeg" alt="example_uml" style="zoom:50%;" />
+>
+> 
+
