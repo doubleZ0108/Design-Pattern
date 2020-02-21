@@ -621,6 +621,8 @@ pubish-subscribe 发行-订阅
 
 定义一个creating object的界面，但是让subclass决定最终要实例化哪个class。将实例化动作**推迟**到子类进行。
 
+- 你用Application Framework并不是直接new里面的类，通常Application Framework中的类有很多virtual function，使用的时候需要继承Application Framework中的class，实现自己的功能，new的是自己写的类
+
 > 例. C++
 >
 > **【Framework】**
