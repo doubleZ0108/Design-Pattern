@@ -1,8 +1,10 @@
 # Template Method
 
-**定义算法骨干(skeleton)，推迟其中某些步骤让他们在subclass中才能真正的完成**
+定义算法骨干(skeleton)，推迟其中某些步骤让他们在subclass中才能真正的完成
 
-**这使得subclass能够重新定义算法内的某些步骤，而不需改变算法的架构**
+这使得subclass能够重新定义算法内的某些步骤，而不需改变算法的架构
+
+<img src="../ScreenShots/Template Method/uml.jpeg" alt="uml" style="zoom: 33%;" />
 
 - **表现手法：**virtual function
   

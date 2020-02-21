@@ -2,6 +2,8 @@
 
 定义a family of algorithms，封装其中的每一个使得可以被交换使用，算法交换不影响用户
 
+<img src="../ScreenShots/Strategy/uml.jpeg" alt="uml" style="zoom:50%;" />
+
 - **表现手法：**polymorphism
 - 可以在**runtime**时改变策略（不关掉程序）
   - 指针变换到另一个子类
