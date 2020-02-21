@@ -126,7 +126,9 @@
 >
 > 答：未定义，**危险**⚠️
 
-<img src="ScreenShots/Intro/new&delete.jpeg" alt="new&amp;delete" style="zoom:150%;" />
+<img src="ScreenShots/Intro/new_delete.jpeg" alt="new_delete" style="zoom:67%;" />
+
+<img src="ScreenShots/Intro/new_delete_example.jpeg" alt="uml" style="zoom: 33%;" />
 
 -----
 
