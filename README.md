@@ -537,6 +537,10 @@ pubish-subscribe 发行-订阅
 > > Q. 为什么const object调用non-const function是*<u>编译器</u>*所不允许的？
 > >
 > > A. 【zz自己想的】编译器吧函数的入口地址放进去的时候就发现这个地址的函数是non-const的，即使你的non-const function没修改任何东西（compiler不会看那么多），也是不被允许的，它认为你只要没声明为const function，就存在着改的风险，这是绝对禁止的
+>
+> > Q. non-const object即使只读还是会COW？
+> >
+> > A. 没法尽善尽美，提供中间层总会是灵丹妙药
 
 
 
