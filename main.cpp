@@ -21,7 +21,8 @@
 //#include "Composite.h"
 //#include "BeforeCommand.h"
 //#include "Command.h"
-#include "Memento.h"
+//#include "Memento.h"
+#include "Singleton.h"
 
 using namespace std;
 
@@ -141,13 +142,18 @@ using namespace std;
 //    afterCommand();
 //}
 
-void Test_Memento(){
-    testMemento();
+//void Test_Memento(){
+//    testMemento();
+//}
+
+void Test_Singleton(){
+    Singleton singleton = Singleton::Instance();
+    AnotherSingleton anotherSingleton = AnotherSingleton::Instance();
 }
 
 int main(int argc, const char * argv[]) {
     
-    Test_Memento();
+    Test_Singleton();
     
     return 0;
 }
