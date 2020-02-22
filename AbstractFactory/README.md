@@ -4,6 +4,10 @@
 
 <img src="http://c.biancheng.net/uploads/allimg/181114/3-1Q11416002NW.gif" alt="抽象工厂模式的结构图" style="zoom:50%;" />
 
+- 不真的去new 具体的class，而是使用抽象的父类
+
+- **实例**：跨平台
+
 - **production terminology**
 
   - **product**: the object being created
