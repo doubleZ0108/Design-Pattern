@@ -1250,3 +1250,17 @@ pubish-subscribe 发行-订阅
 - 对客户屏蔽了子系统
 - 降低了大型软件的编译依赖性，简化系统的跨平台移植过程（编译一个子系统不影响其他子系统）
 
+> 例. Java
+>
+> **Facade**
+>
+> - subsystem1
+> - subsystem2
+> - subsystem3
+> - `method()`
+>
+> **Subsystem1**
+>
+> **Subsystem2**
+>
+> **Subsystem3**
