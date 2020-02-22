@@ -53,7 +53,7 @@
 
 - **Inheritance ｜ 继承：**is-a
 
-  <img src="ScreenShots/Intro/inheritance example.png" alt="image-20191010201816293" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/inheritance example.png" alt="image-20191010201816293" style="zoom: 33%;" />
 
   ```C++
   class CMyDoc : public CDocumemnt{		//CMyDoc中有CDocumemnt成分
@@ -71,11 +71,11 @@
 
     > 是一种：就可以用继承来表示
 
-    <img src="ScreenShots/Intro/inheritance.png" alt="image-20191009201036158" style="zoom:50%;" />
+    <img src="ScreenShots/Intro/inheritance.png" alt="image-20191009201036158" style="zoom: 33%;" />
 
 - **Composition ｜ 组成：**has-a
 
-  <img src="ScreenShots/Intro/Composition.png" alt="image-20191009202130328" style="zoom:50%;" />
+  <img src="ScreenShots/Intro/Composition.png" alt="image-20191009202130328" style="zoom: 33%;" />
 
   ```C++
   class CMyDoc : public CDocumemnt	//CMyDoc中有CDocumemnt成分
@@ -187,7 +187,7 @@
 
 定义a family of algorithms，封装其中的每一个使得可以被交换使用，算法交换不影响用户
 
-<img src="ScreenShots/Strategy/uml.jpeg" alt="uml" style="zoom:50%;" />
+<img src="ScreenShots/Strategy/uml.jpeg" alt="uml" style="zoom: 33%;" />
 
 - **表现手法：**polymorphism
 - 可以在**runtime**时改变策略（不关掉程序）
@@ -223,7 +223,7 @@
 > - **StrategyOne, StrategyTwo, StrategyThr**
 >   - 实现虚函数solutioin()
 >
-> <img src="ScreenShots/Strategy/Strategy_cppdemo_classdiagram.png" alt="Strategy_cppdemo_classdiagram" style="zoom:50%;" />
+> <img src="ScreenShots/Strategy/Strategy_cppdemo_classdiagram.png" alt="Strategy_cppdemo_classdiagram" style="zoom: 33%;" />
 >
 > **如果有新的策略加入，需要改动的地方**
 >
@@ -262,7 +262,7 @@ pubish-subscribe 发行-订阅
 - Observers应该有一个同名函数Update：用于让自己订阅的Subject更新自己
 - **OCP：**添加Observer不需要修改Subject内部
 
-<img src="ScreenShots/Observer/Observer_principle.png" alt="image-20191015195451730" style="zoom:50%;" />
+<img src="ScreenShots/Observer/Observer_principle.png" alt="image-20191015195451730" style="zoom: 33%;" />
 
 > 例. java
 >
@@ -283,13 +283,13 @@ pubish-subscribe 发行-订阅
 >
 > 某一个view修改了document，document通知给其他所有用户进行修改
 >
-> <img src="ScreenShots/Observer/Observer_cppdemo.png" alt="image-20191016093733074" style="zoom:50%;" />
+> <img src="ScreenShots/Observer/Observer_cppdemo.png" alt="image-20191016093733074" style="zoom: 33%;" />
 
 > 例. C++
 >
 > - 调用Subject的`updateValue()`意味着数据有变化 -> 通知所有Observers
 >
-> <img src="ScreenShots/Observer/Observer_cppdemo_UML.png" alt="image-20191016155341753" style="zoom:50%;" />
+> <img src="ScreenShots/Observer/Observer_cppdemo_UML.png" alt="image-20191016155341753" style="zoom: 33%;" />
 
 ------
 
@@ -301,7 +301,7 @@ pubish-subscribe 发行-订阅
 
 - 统一的接口
 
-  <img src="ScreenShots/Iterator/Iterator_main.png" alt="image-20191016160944406" style="zoom:50%;" />
+  <img src="ScreenShots/Iterator/Iterator_main.png" alt="image-20191016160944406" style="zoom: 33%;" />
 
 > Q：把Iterator的功能容器的内部方法不可以么？
 >
@@ -400,7 +400,7 @@ pubish-subscribe 发行-订阅
 >
 > **【引入Reference Counting】**
 >
-> <img src="ScreenShots/Reference Counting/ReferenceCounting_myString.jpeg" alt="ReferenceCounting_myString" style="zoom:50%;" />
+> <img src="ScreenShots/Reference Counting/ReferenceCounting_myString.jpeg" alt="ReferenceCounting_myString" style="zoom: 33%;" />
 >
 > - 引入一个`Reference Counter`（不改变原本设计，就不可能添加`Reference Counting`功能）
 >
@@ -656,7 +656,7 @@ pubish-subscribe 发行-订阅
 > - **myApp** 
 > - **myDoc** 
 >
-> <img src="ScreenShots/Factory Method/factorymethod_cppdemo_UML.JPG" alt="factorymethod_cppdemo_UML" style="zoom:50%;" />
+> <img src="ScreenShots/Factory Method/factorymethod_cppdemo_UML.JPG" alt="factorymethod_cppdemo_UML" style="zoom: 33%;" />
 
 ------
 
@@ -667,7 +667,7 @@ pubish-subscribe 发行-订阅
 - 共享就一定要有一个**控制中心**
 - 做第一个东西的时候很花时间，因此想只做一次，把它变成原型；以后再用直接memcpy就可以了
 
-<img src="ScreenShots/Property/property_uml.png" alt="property_uml" style="zoom:33%;" />
+<img src="ScreenShots/Property/property_uml.png" alt="property_uml" style="zoom: 50%;" />
 
 <img src="ScreenShots/Property/property_uml.png" alt="property_uml" style="zoom:33%;" />
 
@@ -746,7 +746,7 @@ pubish-subscribe 发行-订阅
 
 > 例. Java 文件系统
 >
-> <img src="ScreenShots/Adaptor/example_uml.jpeg" alt="example_uml" style="zoom:50%;" />
+> <img src="ScreenShots/Adaptor/example_uml.jpeg" alt="example_uml" style="zoom: 33%;" />
 >
 > - Composite实现Acceptor接口
 >
@@ -809,7 +809,7 @@ pubish-subscribe 发行-订阅
 
 > 例. C++ undo/redo
 >
-> <img src="ScreenShots/Memento/example_uml.jpeg" alt="example_uml" style="zoom:50%;" />
+> <img src="ScreenShots/Memento/example_uml.jpeg" alt="example_uml" style="zoom: 33%;" />
 >
 > `class Memento`：类似于一张快照，储存拍摄时的状态（数据信息）
 >
@@ -916,7 +916,7 @@ pubish-subscribe 发行-订阅
 
 以同一interface创建一整族相关或相依的objects，不需指明各objects真正所属的具体classes
 
-<img src="http://c.biancheng.net/uploads/allimg/181114/3-1Q11416002NW.gif" alt="抽象工厂模式的结构图" style="zoom:50%;" />
+<img src="http://c.biancheng.net/uploads/allimg/181114/3-1Q11416002NW.gif" alt="抽象工厂模式的结构图" style="zoom: 67%;" />
 
 - 不真的去new 具体的class，而是使用抽象的父类
 
@@ -949,7 +949,7 @@ pubish-subscribe 发行-订阅
 
   > 例. Java 农场
   >
-  > <img src="ScreenShots/Abstract Factory/example_uml.png" alt="image-20200206112900797" style="zoom:50%;" />
+  > <img src="ScreenShots/Abstract Factory/example_uml.png" alt="image-20200206112900797" style="zoom: 33%;" />
   >
   > **ProductFactory**
   >
@@ -983,7 +983,7 @@ pubish-subscribe 发行-订阅
 
 为object提供一个代理人，用以控制对该object的访问（有些情况下，client不能或不想直接访问另一个对象，这时需要找一个中介帮忙完成）
 
-<img src="ScreenShots/Proxy/uml.png" alt="image-20200206135844378" style="zoom:50%;" />
+<img src="ScreenShots/Proxy/uml.png" alt="image-20200206135844378" style="zoom: 33%;" />
 
 - `RealSubject`: 实现例抽象Subject的具体业务，是**最终要引用的对象**
 - `Proxy`:提供了与RealSubject相同的接口，内部含有对RealSubject对引用
@@ -1057,7 +1057,7 @@ pubish-subscribe 发行-订阅
 
 确保class只能生成唯一一个实例，且提供全局访问点
 
-<img src="ScreenShots/Singleton/uml.jpeg" alt="uml" style="zoom:50%;" />
+<img src="ScreenShots/Singleton/uml.jpeg" alt="uml" style="zoom: 33%;" />
 
 - **禁止外界创建对象** => 把构造函数设计成private
   - 每当生成一个object时一定有一个ctor被唤醒
@@ -1123,15 +1123,15 @@ pubish-subscribe 发行-订阅
 - **分类**
   - 类适配器
   
-    <img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q1151045351c.gif" alt="类适配器模式的结构图" style="zoom:50%;" />
+    <img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q1151045351c.gif" alt="类适配器模式的结构图" style="zoom: 67%;" />
   
   - 对象适配器
   
-    <img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q1151046105A.gif" alt="对象适配器模式的结构图" style="zoom:50%;" />
+    <img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q1151046105A.gif" alt="对象适配器模式的结构图" style="zoom: 67%;" />
 
 > 例. Java 电能发动机和光能发动机统一接口给用户
 >
-><img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115104I22F.gif" alt="发动机适配器的结构图" style="zoom:50%;" />
+><img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115104I22F.gif" alt="发动机适配器的结构图" style="zoom: 67%;" />
 > 
 >- **Motor**：Target
 > - **ElectricMotor**：适配者-电能发动机
@@ -1203,7 +1203,7 @@ pubish-subscribe 发行-订阅
 
 不改变现有对象结构的情况下，动态的给该对象增加一些额外的功能
 
-<img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115142115M2.gif" alt="装饰模式的结构图" style="zoom:50%;" />
+<img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115142115M2.gif" alt="装饰模式的结构图" style="zoom: 67%;" />
 
 - 采用装饰模式扩展对象的功能比采用继承方式更加灵活
 - 通常扩展一个类的功能会使用继承方式，但继承具有静态特性，耦合度高，并且随着扩展功能的增多，子类会膨胀；这时使用组合关系创建装饰对象包裹真实对象，<u>并在保持真实对象的类结构不变的前提下，为其提供额外的功能</u>
@@ -1244,7 +1244,7 @@ pubish-subscribe 发行-订阅
 
 为多个复杂的子系统提供一个统一的接口
 
-<img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115152143509.gif" alt="外观模式的结构图" style="zoom: 50%;" />
+<img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115152143509.gif" alt="外观模式的结构图" style="zoom: 67%;" />
 
 - 降低子系统和客户端之间的耦合度，使得子系统变化不会影响调用他的客户端
 - 对客户屏蔽了子系统
@@ -1278,7 +1278,7 @@ pubish-subscribe 发行-订阅
   - 执行效率低
   - 每条规则至少要定义一个类，文法规则很多时，系统难以维护
 
-<img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150626422.gif" alt="解释器模式的结构图" style="zoom:50%;" />
+<img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150626422.gif" alt="解释器模式的结构图" style="zoom: 67%;" />
 
 - **结构**
   - **Abstract Expression**：定义解释器接口，约定解释器等解释操作
@@ -1356,7 +1356,7 @@ class Context{
 > - 完成对终结符表达式的初始化
 > - `freeRide(String info)`：提供给client用来对字符串进行解释
 >
-> <img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150Q6401.gif" alt="“韶粵通”公交车读卡器程序的结构图" style="zoom:50%;" />
+> <img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150Q6401.gif" alt="“韶粵通”公交车读卡器程序的结构图" style="zoom: 67%;" />
 
 ------
 
@@ -1368,7 +1368,7 @@ class Context{
 - 原有对象之间可以解耦，且可以独立的改变它们之间的交互
 - 但是中介者的职责可能过大，导致系统难以维护
 
-<img src="http://c.biancheng.net/uploads/allimg/181116/3-1Q1161I532V0.gif" alt="中介者模式的结构图" style="zoom:50%;" />
+<img src="http://c.biancheng.net/uploads/allimg/181116/3-1Q1161I532V0.gif" alt="中介者模式的结构图" style="zoom: 67%;" />
 
 > 例. Java
 >
@@ -1390,3 +1390,4 @@ class Context{
 > **Concrete Colleague**
 >
 > - `send()`： 请求中介者发送，调用Mediator的`relay(this)`，参数是自己
+
