@@ -1372,10 +1372,21 @@ class Context{
 
 > 例. Java
 >
-> Mediator
+> **Mediator**
 >
-> Concrete Mediator
+> - `abstract register(colleague)`：注册
+> - `abstract relay(colleague)`：转发同事的信息给其他所有同事
 >
-> Colleague
+> **Concrete Mediator**
 >
-> Concrete Colleague
+> - `register()`：在自己的仓库(用来管理Colleague)里存下这个人；指定这个人的中介是自己
+>
+> **Colleague**
+>
+> - 保存一个Mediator对象
+> - `abstract receive()`
+> - `abstract send()`
+>
+> **Concrete Colleague**
+>
+> - `send()`： 请求中介者发送，调用Mediator的`relay(this)`，参数是自己
