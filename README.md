@@ -1321,3 +1321,40 @@ class Context{
 }
 ```
 
+> 例. Java 公交卡读卡器
+>
+> 读卡器判断乘客的身份，如果是<u>上海或广州</u>的<u>老人妇女儿童</u>，则免费乘车，否则乘车2元
+>
+> **文法规则**
+>
+> ```xml
+> <expression> ::= <city>的<person>
+> <city> ::= 上海｜广州
+> <person> ::= 老人｜妇女｜儿童
+> ```
+>
+> **Expression**：抽象表达式接口
+>
+> - `abstract interpret(String info)`
+>
+> **Terminal Expression**
+>
+> - 用Set保存满足条件的城市
+> - 用Set保存满足条件的人
+> - `interpret()`：判断被分析的字符串是否是集合中的终结符
+>
+> **Nonterminal Expression**
+>
+> - 满足条件的城市的终结符表达式对象
+> - 满足条件的人的终结符表达式对象
+> - `interpret()`：判断被分析的字符串是否是满足条件的城市中的满足条件的人
+>
+> **Context**
+>
+> - 解释器所需要的城市
+> - 解释器所需要的人
+> - 完成对终结符表达式的初始化
+> - `freeRide(String info)`：提供给client用来对字符串进行解释
+>
+> <img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150Q6401.gif" alt="“韶粵通”公交车读卡器程序的结构图" style="zoom:50%;" />
+
