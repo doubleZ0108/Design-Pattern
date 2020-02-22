@@ -1371,3 +1371,11 @@ class Context{
 <img src="http://c.biancheng.net/uploads/allimg/181116/3-1Q1161I532V0.gif" alt="中介者模式的结构图" style="zoom:50%;" />
 
 > 例. Java
+>
+> Mediator
+>
+> Concrete Mediator
+>
+> Colleague
+>
+> Concrete Colleague

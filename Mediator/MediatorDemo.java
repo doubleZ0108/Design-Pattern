@@ -71,19 +71,36 @@ class ConcreteColleague2 extends Colleague{
     }
 }
 
+class ConcreteColleague3 extends Colleague{
+    @Override
+    public void receive() {
+        System.out.println("ConcreteColleague3收到请求");
+    }
+
+    @Override
+    public void send() {
+        System.out.println("ConcreteColleague3发出请求");
+        mediator.relay(this);       //请中介者转发
+    }
+}
+
 
 public class MediatorDemo {
     public static void main(String[] args) {
         Mediator mediator = new ConcreteMediator();
-        Colleague c1, c2;
+        Colleague c1, c2, c3;
         c1 = new ConcreteColleague1();
         c2 = new ConcreteColleague2();
+        c3 = new ConcreteColleague3();
 
         mediator.register(c1);
         mediator.register(c2);
+        mediator.register(c3);
 
         c1.send();
         System.out.println("-------------");
         c2.send();
+        System.out.println("-------------");
+        c3.send();
     }
 }
