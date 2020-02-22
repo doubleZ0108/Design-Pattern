@@ -1358,4 +1358,16 @@ class Context{
 >
 > <img src="http://c.biancheng.net/uploads/allimg/181119/3-1Q119150Q6401.gif" alt="“韶粵通”公交车读卡器程序的结构图" style="zoom:50%;" />
 
-i
+------
+
+## Mediator
+
+定义一个中介对象封装一系列对象之间的交互
+
+- 将“网状结构”转为“星型结构”（一对多转变为一对一）
+- 原有对象之间可以解耦，且可以独立的改变它们之间的交互
+- 但是中介者的职责可能过大，导致系统难以维护
+
+<img src="http://c.biancheng.net/uploads/allimg/181116/3-1Q1161I532V0.gif" alt="中介者模式的结构图" style="zoom:50%;" />
+
+> 例. Java
