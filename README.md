@@ -1197,3 +1197,18 @@ pubish-subscribe 发行-订阅
 > }
 > ```
 
+------
+
+## Decorator
+
+不改变现有对象结构的情况下，动态的给该对象增加一些额外的功能
+
+<img src="http://c.biancheng.net/uploads/allimg/181115/3-1Q115142115M2.gif" alt="装饰模式的结构图" style="zoom:50%;" />
+
+- 采用装饰模式扩展对象的功能比采用继承方式更加灵活
+- **结构**
+  - **Component**：抽象构建
+  - **Concrete Component**：实现抽象构建，通过装饰角色为其添加一些职责
+  - **Decorator**：继承抽象构建，并包含具体构建的实例
+  - **Concrete Decorator**：实现抽象装饰的方法，并给具体构建对象添加附加的责任
+
