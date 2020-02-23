@@ -7,153 +7,162 @@
 //
 
 #include <iostream>
-//#include "TemplateMethod.h"
-//#include "Strategy.h"
-//#include "Observer.h"
-//#include "Iterator.h"
-//#include "Singleton.h"
-//#include "myString.h"
-//#include "ReferenceCounting.h"
-//#include "CopyOnWrite.h"
-//#include "Shareable.h"
-//#include "FactoryMethod.h"
-//#include "Property.h"
-//#include "Composite.h"
-//#include "BeforeCommand.h"
-//#include "Command.h"
-//#include "Memento.h"
+#include "TemplateMethod.h"
+#include "Strategy.h"
+#include "Observer.h"
+#include "Iterator.h"
+#include "Singleton.h"
+#include "myString.h"
+#include "ReferenceCounting.h"
+#include "CopyOnWrite.h"
+#include "Shareable.h"
+#include "FactoryMethod.h"
+#include "Property.h"
+#include "Composite.h"
+#include "BeforeCommand.h"
+#include "Command.h"
+#include "Memento.h"
 #include "Singleton.h"
 
 using namespace std;
 
-//void Test_TemplateMethod()
-//{
-//    CMyDoc myDoc;
-//    myDoc.OnFileOpen();
-//}
-//
-//void Test_Strategy()
-//{
-//    int op;
-//    StrategyTest stest;
-//
-//    while(true){
-//        /* 有新的策略，在这里修改一下UI */
-//        cout << "你想使用那种解决方案1~3 [0 to quit] " << endl;
-//        cin >> op;
-//        if(!op){break;}
-//
-//        stest.setStrategy(op, 999);
-//        stest.run();
-//
-//    }
-//
-//}
-//
-//void Test_Observer()
-//{
-//    Subject subj;
-//    DivObserver divobs1(4);    subj.addObserver(&divobs1);
-//    DivObserver divobs2(3);    subj.addObserver(&divobs2);
-//    ModObserver modobs3(3);    subj.addObserver(&modobs3);
-//
-//    subj.updateValue(14);
-//}
-//
-//void Test_Iterator()
-//{
-//    Iterator();
-//}
-//
-//void Test_Singleton()
-//{
-//    Singleton::Instance();
-//    MayersSingleton::Instance();
-//
-//}
-//
-//void Test_ReferenceCounting()
-//{
-//    myString str = "hello";     //myString(const char* cstr);
-//    myString str1;              //myString() {}
-//    str1 = str;                 //myString& operator=(const myString& rhs);
-//    myString str2(str);         //myString(const myString& rhs);
-//}
-//
-//void Test_CopyOnWrite()
-//{
-//    const myString cstr = "hello";
-//    cout << cstr[2];        //调用@1
-//
-//    myString str = "world";
-//    myString str1(str);
-//    cout << str[2];                //调用@2 read
-//
-//    myString str2;
-//    str2 = str;
-//    str[1] = 'O';                //调用@2 write
-//}
-//
-//void Test_Shareable()
-//{
-//    myString s1 = "hello";
-//    char *p = &s1[1];   //使用了non-const operator[]，悲观的认为是外界拥有handle了 => 将shareable设为false
-//    myString s2 = s1;   //这里s1的shareable已经被设为false，所以此时s2的value要new一个新的
-//    *p = 'x';
-//}
-//
-//void Test_FactoryMethod()
-//{
-//    myApp *myapp = new myApp();
-//    myapp->NewDocument("doc1");
-//    myapp->NewDocument("doc2");
-//    myapp->OutputDocument();
-//}
+void Test_TemplateMethod()
+{
+    CMyDoc myDoc;
+    myDoc.OnFileOpen();
+}
 
-//void Test_Property()
-//{
-//    testProperty();
-//}
+void Test_Strategy()
+{
+    int op;
+    StrategyTest stest;
 
-//void Test_Composite()
-//{
-//    Composite containers[4];
-//    for(int i=0;i<4;++i){
-//        for(int j=0;j<3;++j){
-//            containers[i].add(new Leaf(i*3 + j));
-//        }
-//    }
-//
-//    for(int i=1;i<4;++i){
-//        containers[0].add(&(containers[i]));
-//    }
-//
-//    for(int i=0;i<4;++i){
-//        containers[i].traverse();
-//        cout << endl;
-//    }
-//}
+    while(true){
+        /* 有新的策略，在这里修改一下UI */
+        cout << "你想使用那种解决方案1~3 [0 to quit] " << endl;
+        cin >> op;
+        if(!op){break;}
 
-//void Test_Command(){
-//    cout << "=== Before Command ===" << endl;
-//    beforeCommand();
-//
-//    cout << endl << "=== After Command ===" << endl;
-//    afterCommand();
-//}
+        stest.setStrategy(op, 999);
+        stest.run();
 
-//void Test_Memento(){
-//    testMemento();
-//}
+    }
 
-void Test_Singleton(){
-    Singleton singleton = Singleton::Instance();
-    AnotherSingleton anotherSingleton = AnotherSingleton::Instance();
+}
+
+void Test_Observer()
+{
+    Subject subj;
+    DivObserver divobs1(4);    subj.addObserver(&divobs1);
+    DivObserver divobs2(3);    subj.addObserver(&divobs2);
+    ModObserver modobs3(3);    subj.addObserver(&modobs3);
+
+    subj.updateValue(14);
+}
+
+void Test_Iterator()
+{
+    Iterator();
+}
+
+void Test_Singleton()
+{
+    Singleton::Instance();
+    MayersSingleton::Instance();
+
+}
+
+void Test_ReferenceCounting()
+{
+    myString str = "hello";     //myString(const char* cstr);
+    myString str1;              //myString() {}
+    str1 = str;                 //myString& operator=(const myString& rhs);
+    myString str2(str);         //myString(const myString& rhs);
+}
+
+void Test_CopyOnWrite()
+{
+    const myString cstr = "hello";
+    cout << cstr[2];        //调用@1
+
+    myString str = "world";
+    myString str1(str);
+    cout << str[2];                //调用@2 read
+
+    myString str2;
+    str2 = str;
+    str[1] = 'O';                //调用@2 write
+}
+
+void Test_Shareable()
+{
+    myString s1 = "hello";
+    char *p = &s1[1];   //使用了non-const operator[]，悲观的认为是外界拥有handle了 => 将shareable设为false
+    myString s2 = s1;   //这里s1的shareable已经被设为false，所以此时s2的value要new一个新的
+    *p = 'x';
+}
+
+void Test_FactoryMethod()
+{
+    myApp *myapp = new myApp();
+    myapp->NewDocument("doc1");
+    myapp->NewDocument("doc2");
+    myapp->OutputDocument();
+}
+
+void Test_Property()
+{
+    testProperty();
+}
+
+void Test_Composite()
+{
+    Composite containers[4];
+    for(int i=0;i<4;++i){
+        for(int j=0;j<3;++j){
+            containers[i].add(new Leaf(i*3 + j));
+        }
+    }
+
+    for(int i=1;i<4;++i){
+        containers[0].add(&(containers[i]));
+    }
+
+    for(int i=0;i<4;++i){
+        containers[i].traverse();
+        cout << endl;
+    }
+}
+
+void Test_Command()
+{
+    cout << "=== Before Command ===" << endl;
+    beforeCommand();
+
+    cout << endl << "=== After Command ===" << endl;
+    afterCommand();
+}
+
+void Test_Memento()
+{
+    testMemento();
 }
 
 int main(int argc, const char * argv[]) {
     
+    Test_TemplateMethod();
+    Test_Strategy();
+    Test_Observer();
+    Test_Iterator();
     Test_Singleton();
-    
+    Test_ReferenceCounting();
+    Test_CopyOnWrite();
+    Test_Shareable();
+    Test_FactoryMethod();
+    Test_Property();
+    Test_Composite();
+    Test_Command();
+    Test_Memento();
+
     return 0;
 }
