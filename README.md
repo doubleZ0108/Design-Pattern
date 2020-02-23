@@ -13,14 +13,18 @@
 
 
 
-设计模式笔记(完整版) | Design Pattern Notes(full version)
+
+
+[设计模式笔记(完整版) | Design Pattern Notes(full version)](https://github.com/doubleZ0108/Design-Pattern/blob/master/doc/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.pdf)
+
+
 
 
 
 ## 设计模式 | Design Pattern
 
 - [单例模式 | Singleton](https://github.com/doubleZ0108/Design-Pattern/tree/master/Singleton)
-- 原型模式 | Prototype
+- [原型模式 | Prototype](https://github.com/doubleZ0108/Design-Pattern/tree/master/Prototype)
 - [工厂方法 | Factory Method](https://github.com/doubleZ0108/Design-Pattern/tree/master/Factory%20Method)
 - 抽象工厂模式 | Abstract Factory
 - 建造者模式 | Builder
