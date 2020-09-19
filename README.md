@@ -1,13 +1,9 @@
 # 设计模式 | Design Pattern
 
-Table of Contents
-=================
-
-   * [设计模式 | Design Pattern](#设计模式--design-pattern)
-     * [关于作者 | About the Auther](#关于作者--about-the-auther)
-     * [笔记 | Note](#笔记--note)
-     * [代码 | Code](#代码--code)
-     * [项目结构 | Project Structure](#项目结构--project-structure)
+* [关于作者 | About the Auther](#关于作者--about-the-auther)
+* [笔记 | Note](#笔记--note)
+* [代码 | Code](#代码--code)
+* [项目结构 | Project Structure](#项目结构--project-structure)
 
 ------
 
